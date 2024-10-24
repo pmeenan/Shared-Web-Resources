@@ -8,7 +8,7 @@ The contents in a file in a shared cache can be used as a tracking vector simila
 
 This risk can be mitigated by requiring the use of [Subresource Integrity](countermeasures.md#subresource-integrity-sri).
 
-## File Existence as Bits
+## Fingerprinting
 
 If the shared cache can be probed for the existence of a file (and it is best to assume that it can be), then each file can proved 1-bit of information to an attacker. By using 32 unique files, say `https://example.com/uid/1` through `https://example.com/uid/32`, an attacker can generate a unique 32-bit identifier for a given user, set the bits by storing the relevant files and then probe for the ID by checking for the existence of each of the 32 URLs to regenerate the 32-bit unique ID.
 
